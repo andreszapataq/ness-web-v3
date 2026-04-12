@@ -2,23 +2,12 @@ import Image from "next/image";
 import { Nav } from "@/components/sections/nav";
 import { Faq } from "@/components/sections/faq";
 
-const HERO_IMG =
-  "https://lh3.googleusercontent.com/aida-public/AB6AXuAcdkDPpocdb7NhE0DeOMsn-oepuyiff9uNRtki391mYd2JNIScHoYwxOXa_vYlhLfe-5yk8jy2psWg7D7HnHqHU7qb60RucmdpzSBUCni6keumN1nPM_So4geeZWx6NgQPU_vGR_iWknBmFO1i-7bXMldzUeY1iJEKgJUx10mfAQ0H2s7JhQ1fKS7WsDGDeXfOgjQf8u2xFfmcnen7DwP23oQZuvCjWnJp6qCO86V20qnV5i6_AWvF9GOqpq788Qjjd-jPkIOFSEQy";
-
-const FEATURE_IMG =
-  "https://lh3.googleusercontent.com/aida-public/AB6AXuAcHLzpMX2kaZQKnLBIDRABiNc1rkxHHsL1PCktQth1fY0wBn7oGgmiAI7sObbpafZZylfgD6XvCwTBwzCW6PoiGRQdKg-_KBVrWlNpC58w3SEd1CShotbknDBV1Lp8pt-_68aCn8qNsAPfQgX63bIA18G5U_i3WaLiJoiG3hgbfYhi0Iql67OeB9hcGIZjUv9-X_XjCd-xMPvlPm_mqnQT7Pe4xD2XMLMl3Q7NpaW8R7AKF7-LTeP_n-JfaVsNcQqSwIagv83cviJ-";
-
-const TESTIMONIAL_AVATAR =
-  "https://lh3.googleusercontent.com/aida-public/AB6AXuAyxlF6zG5sHlrF1iI6TMpLgE6h_GjOElQfLrjJqv83v9Jvqi0YdnnF2__MlabdPYaz60Z_Am7o34L7crtmXYPBI9nRllPBl5ivkTwBthLwURDKd_W4o-GbKHvV1KFpoKqd7h9I25eeqBI1sYKH5x6YUvlB_y0vB7UnBqI-AbtJBaaPnUN558ZfOSYxT4rdrT60dWcDupvMyz8HMX1PUfbRKuRT_CIo3YpNFG5h_mdFHBb1WMXE5IAxFehAHZEJ5ePJOefuckIaV4Yp";
-
-const STUDIO_IMG =
-  "https://lh3.googleusercontent.com/aida-public/AB6AXuBSpUuzhOMvFmXvCYsmHvV3J23v5JFQK47x8Y9XPN2bPG4mJA265GrfDqq_CvbhiEuZ2CiJilIAfnqV8oCAd45SHrmj5b6inS5PUJ04hwJvljVmt5aFqk_JqwAuMs3yPpgKxmLqgAFE4BntuVgCnp1ulkHlFde3NIez3UIqXx2rFNdnMlVKF8JibvD4l7Siie2WqXPv_YM05ebUGZCuGhcCCMMdR7325bKzgRHh1vcglVDLBjq-NSCvo-vv5Zk6OSPtGpd6hY9hWrFV";
-
-const PRODUCT_DETAIL_IMG =
-  "https://lh3.googleusercontent.com/aida-public/AB6AXuCKQebWAOETe5kHr_9O0HCmVgovtksFJ3TdzLYdfbnUOo_xsp3xPG0DmQXvYFJFK2TWJRZxZeCsuxRT4lRq2pYJBkx50DeYgM50Cjv8r-y47SCXkrLCArXBN8RJpcXf9BsYp9s-RFVsFjaTRD9P3TR6mbsrTUxcbH4POQgzNauyGKSGSuMWzjFmeer56lQ7u3q7C8ETFVB0jjvS3GsoKB3F8VC2wXD4lX8UO0if8LwgUiEqdDT7N4NrfZhLx3XStP04Iko8OqSswuqK";
-
-const TEXTURE_IMG =
-  "https://lh3.googleusercontent.com/aida-public/AB6AXuAoyFGbvibb-v6abUlgA_XwpjWEvb3LnCT5pHtkYHXM00NkYcJWQtHyHHRqd2yD4dHAUBy_wa1ETQuy-HvzXFH4uOVvpdPAF9a1HkVhUQR8mn95In6MX8c0NLrhE8SyV5ODahaU7c315kxxQDVmRYFByOEFrS5hJDePWPUj8Kft74E-7ek9CJiizTxN2K2YwbahCsvBgxdkB8wwOko93oF8_bLbQ7s2pzvf8vKJaVoVxX374nmmpv80hL-cMtEdDbLpXyZ1gJmcOlj8";
+const HERO_IMG = "/images/hero-dashboard.webp";
+const FEATURE_IMG = "/images/feature-inventario-bodega.webp";
+const TESTIMONIAL_AVATAR = "/images/testimonial-avatar.webp";
+const STUDIO_IMG = "/images/operacion-logistica.webp";
+const PRODUCT_DETAIL_IMG = "/images/plataforma-detalle.webp";
+const TEXTURE_IMG = "/images/cta-textura.webp";
 
 const stats = [
   { value: "9x", label: "Procesos más rápidos" },
@@ -288,7 +277,7 @@ export default function Home() {
                     &ldquo;Antes dependíamos de Excel y de llamadas para saber
                     dónde estaba cada lote. Con Ness Digital tenemos toda la
                     operación en una sola pantalla — despachamos más cirugías
-                    con el mismo equipo y dejamos de perder materiales.&rdquo;
+                    con el mismo equipo y dejamos de perder material.&rdquo;
                   </blockquote>
                   <div className="flex items-center gap-6">
                     <Image
@@ -296,12 +285,12 @@ export default function Home() {
                       alt="Cliente de Ness Digital"
                       width={64}
                       height={64}
-                      className="w-16 h-16 rounded-full grayscale object-cover"
+                      className="w-16 h-16 rounded-full object-cover"
                     />
                     <div>
-                      <div className="text-xl font-bold">[Nombre del cliente]</div>
+                      <div className="text-xl font-bold">Victor Cadena</div>
                       <div className="text-on-surface-variant font-medium">
-                        Jefe de Logística, [Empresa distribuidora]
+                        Dir. Nacional, BioTissue Colombia
                       </div>
                     </div>
                   </div>

@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 
 const links = [
-  { label: "Plataforma", href: "#workflows", active: true },
+  { label: "Plataforma", href: "#workflows" },
   { label: "Demo", href: "#demo" },
   { label: "Preguntas", href: "#faq" },
 ];
@@ -30,11 +30,7 @@ export function Nav() {
             <a
               key={l.label}
               href={l.href}
-              className={
-                l.active
-                  ? "text-black border-b-2 border-black pb-1"
-                  : "hover:text-black transition-colors"
-              }
+              className="hover:text-black transition-colors"
             >
               {l.label}
             </a>
