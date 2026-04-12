@@ -10,9 +10,9 @@ const jakarta = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "TaskGo — Executive task management for high-performance teams",
+  title: "Ness Digital — Trazabilidad de dispositivos médicos",
   description:
-    "Architectural task management for high-performance teams. Monochrome efficiency meets enterprise-grade power.",
+    "Software para distribuidores de dispositivos médicos: gestione inventarios, despachos y cirugías con trazabilidad total de cada lote.",
 };
 
 export default function RootLayout({
@@ -21,7 +21,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={jakarta.variable}>
+    <html lang="es" className={jakarta.variable}>
       <head>
         <link
           rel="stylesheet"

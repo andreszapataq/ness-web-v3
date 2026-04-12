@@ -4,16 +4,16 @@ import { useState } from "react";
 
 const items = [
   {
-    q: "How secure is my team's data?",
-    a: "We use AES-256 encryption at rest and TLS 1.3 for data in transit. Infrastructure is SOC 2 Type II compliant.",
+    q: "¿Cómo protegen la información de los lotes y los pacientes?",
+    a: "Aplicamos cifrado en tránsito y en reposo, control de acceso por rol y registros de auditoría de cada movimiento. Su información está aislada por cliente y nunca se comparte con terceros.",
   },
   {
-    q: "Can I export my data if I leave?",
-    a: "Yes, you own your data. Export projects and tasks in CSV or JSON at any time from your settings panel.",
+    q: "¿Puedo exportar mi inventario y mis remisiones?",
+    a: "Sí. Puede exportar inventarios, remisiones, gastos y egresos a Excel o PDF en cualquier momento, sin bloqueos ni permisos adicionales.",
   },
   {
-    q: "Discounts for non-profits?",
-    a: "We offer a 50% discount for registered 501(c)(3) organizations. Contact our sales team for verification.",
+    q: "¿Funciona para distribuidores pequeños o solo para grandes operaciones?",
+    a: "Funciona para ambos. Ness Digital escala desde una bodega y un cliente hasta redes con decenas de bodegas, cientos de clientes y múltiples centros quirúrgicos.",
   },
 ];
 

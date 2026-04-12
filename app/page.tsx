@@ -21,41 +21,35 @@ const TEXTURE_IMG =
   "https://lh3.googleusercontent.com/aida-public/AB6AXuAoyFGbvibb-v6abUlgA_XwpjWEvb3LnCT5pHtkYHXM00NkYcJWQtHyHHRqd2yD4dHAUBy_wa1ETQuy-HvzXFH4uOVvpdPAF9a1HkVhUQR8mn95In6MX8c0NLrhE8SyV5ODahaU7c315kxxQDVmRYFByOEFrS5hJDePWPUj8Kft74E-7ek9CJiizTxN2K2YwbahCsvBgxdkB8wwOko93oF8_bLbQ7s2pzvf8vKJaVoVxX374nmmpv80hL-cMtEdDbLpXyZ1gJmcOlj8";
 
 const stats = [
-  { value: "40%", label: "Efficiency Boost" },
-  { value: "3x", label: "Faster Delivery" },
-  { value: "100%", label: "Security Rating" },
-  { value: "10k+", label: "Active Teams" },
+  { value: "9x", label: "Procesos más rápidos" },
+  { value: "70%", label: "Menos tiempo de acceso" },
+  { value: "6x", label: "Menos errores humanos" },
+  { value: "100%", label: "Trazabilidad de lotes" },
 ];
 
 const steps = [
   {
     n: "01",
-    title: "Simple Setup",
-    body: "Import existing tasks from any platform in seconds. Zero friction migration.",
+    title: "Ingrese y ubique sus lotes",
+    body: "Cargue lotes con sus datos clave y asígnelos a la bodega correspondiente. Ness Digital mantiene la ubicación de cada lote siempre actualizada.",
   },
   {
     n: "02",
-    title: "Work Effortlessly",
-    body: "Invite your team and assign roles. Dashboards update in real-time, instantly.",
+    title: "Despache con precisión",
+    body: "Cree remisiones por stock o por cirugía con los datos del paciente. Siga cada movimiento desde 'en tránsito' hasta 'entregado'.",
   },
   {
     n: "03",
-    title: "Monitor Progress",
-    body: "High-level summaries of team velocity and project health at your fingertips.",
+    title: "Cierre la cirugía sin errores",
+    body: "Registre el gasto de los lotes utilizados o libere los devueltos. El inventario se ajusta automáticamente.",
   },
 ];
 
-const starterFeatures = [
-  "10 Team Members",
-  "Basic Automations",
-  "5GB Cloud Storage",
-];
-
-const proFeatures = [
-  "Unlimited Members",
-  "Advanced Custom Flows",
-  "Priority 24/7 Support",
-  "SSO & Security Pack",
+const demoFeatures = [
+  "Implementación guiada por nuestro equipo",
+  "Migración asistida desde Excel u otros sistemas",
+  "Capacitación incluida para todo su personal operativo",
+  "Soporte continuo en horario extendido",
 ];
 
 export default function Home() {
@@ -71,37 +65,39 @@ export default function Home() {
           <div className="content-container text-center">
             <div className="mb-6 md:mb-8 inline-block px-6 py-2 bg-black text-white rounded-full reveal-up">
               <span className="text-xs font-bold uppercase tracking-[0.3em]">
-                Executive Summary v1.0
+                Software para distribuidores de dispositivos médicos
               </span>
             </div>
             <h1
               className="text-4xl sm:text-6xl md:text-8xl font-extrabold tracking-tight text-primary mb-6 md:mb-10 leading-[1.1] reveal-up"
               style={{ animationDelay: "80ms" }}
             >
-              Unlock Premium Benefits With Our Advanced Features
+              Trazabilidad total, del lote a la cirugía.
             </h1>
             <p
               className="text-base sm:text-xl md:text-2xl text-on-surface-variant max-w-3xl mx-auto mb-10 md:mb-16 leading-relaxed font-medium reveal-up"
               style={{ animationDelay: "160ms" }}
             >
-              Architectural task management for high-performance teams.
-              Monochrome efficiency meets enterprise-grade power.
+              Ness Digital reemplaza sus Excel y procesos manuales por una
+              plataforma que controla inventarios, despachos y cirugías en
+              tiempo real — para que cada lote llegue al quirófano correcto, en
+              el momento correcto.
             </p>
             <div
               className="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center mb-14 md:mb-24 reveal-up"
               style={{ animationDelay: "240ms" }}
             >
               <a
-                href="#cta"
+                href="#demo"
                 className="px-10 md:px-12 py-4 md:py-5 bg-black text-white font-bold rounded-2xl text-base md:text-lg signature-cta shadow-2xl hover:scale-[1.02] transition-transform"
               >
-                Start Free Trial
+                Agende una demo
               </a>
               <a
                 href="#workflows"
                 className="px-10 md:px-12 py-4 md:py-5 bg-white border-2 border-black/5 text-primary font-bold rounded-2xl text-base md:text-lg hover:bg-surface-container transition-colors"
               >
-                View Demo
+                Conozca la plataforma
               </a>
             </div>
             <div
@@ -112,7 +108,7 @@ export default function Home() {
               <div className="relative bg-white p-3 rounded-4xl shadow-[0_40px_100px_rgba(0,0,0,0.1)] border border-black/5">
                 <Image
                   src={HERO_IMG}
-                  alt="TaskGo dashboard preview"
+                  alt="Panel de control de Ness Digital"
                   width={1600}
                   height={1000}
                   priority
@@ -132,11 +128,12 @@ export default function Home() {
             <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 md:mb-20 gap-6 md:gap-8">
               <div className="max-w-xl">
                 <h2 className="text-4xl sm:text-5xl font-extrabold tracking-tight text-primary mb-6 leading-tight">
-                  Core Capabilities
+                  Una sola plataforma para toda su operación logística y
+                  quirúrgica.
                 </h2>
                 <p className="text-lg md:text-xl text-on-surface-variant font-medium">
-                  Powerful tools built for complex operations without the
-                  visual clutter.
+                  De la entrada del lote a la bodega, hasta el gasto en cirugía
+                  o el egreso por stock.
                 </p>
               </div>
               <div className="hidden md:block h-px bg-outline-variant/30 grow mx-12 mb-6" />
@@ -149,17 +146,17 @@ export default function Home() {
                   </span>
                 </div>
                 <h3 className="text-2xl md:text-3xl font-bold mb-6">
-                  Smart Task Organization
+                  Inventario preciso por bodega y global
                 </h3>
                 <p className="text-on-surface-variant text-lg leading-relaxed mb-10 grow">
-                  Prioritize tasks using our proprietary spatial algorithm.
-                  Group by urgency, project, or custom tags with a single
-                  click.
+                  Controle lotes, seriales y vencimientos con visibilidad en
+                  tiempo real de cada bodega y de su inventario consolidado.
+                  Encuentre cualquier lote en segundos.
                 </p>
                 <div className="aspect-video bg-surface-container rounded-2xl overflow-hidden border border-black/5 relative">
                   <Image
                     src={FEATURE_IMG}
-                    alt="Spatial task organization"
+                    alt="Inventario por bodega y global"
                     fill
                     sizes="(min-width: 768px) 40vw, 90vw"
                     className="object-cover"
@@ -173,33 +170,34 @@ export default function Home() {
                       bolt
                     </span>
                     <h3 className="text-2xl md:text-3xl font-bold mb-4">
-                      Automated Workflows
+                      Despachos por stock y por cirugía
                     </h3>
                     <p className="text-gray-400 text-lg">
-                      Set logic triggers that handle repetitive administrative
-                      tasks automatically.
+                      Genere remisiones con los datos del paciente o despache
+                      directo por stock. Clientes y bodegas sin límites.
                     </p>
                   </div>
-                  <button
-                    type="button"
+                  <a
+                    href="#demo"
                     className="mt-8 text-lg font-bold flex items-center gap-3 hover:gap-5 transition-all w-fit group"
                   >
-                    Explore Automation
+                    Ver en una demo
                     <span className="material-symbols-outlined">
                       arrow_forward
                     </span>
-                  </button>
+                  </a>
                 </div>
                 <div className="bg-white p-10 md:p-12 rounded-3xl shadow-sm border border-black/5 flex flex-col flex-1 min-h-60">
                   <span className="material-symbols-outlined text-4xl mb-6 text-primary">
                     forum
                   </span>
                   <h3 className="text-2xl md:text-3xl font-bold mb-4">
-                    File &amp; Comment Management
+                    Trazabilidad y gasto de lotes
                   </h3>
                   <p className="text-on-surface-variant text-lg">
-                    Centralized hub for all project assets. Attach files
-                    directly to task cards.
+                    Siga el estado de cada remisión, libere lotes solo con la
+                    firma del cliente y registre el gasto en cirugía sin
+                    duplicar trabajo.
                   </p>
                 </div>
               </div>
@@ -235,11 +233,11 @@ export default function Home() {
           <div className="content-container">
             <div className="text-center mb-20 md:mb-32">
               <h2 className="text-4xl md:text-6xl font-extrabold tracking-tight mb-8">
-                Built For Scale
+                Diseñado para crecer con su operación.
               </h2>
               <p className="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto font-medium leading-relaxed">
-                Implementing a high-level productivity framework is now as
-                simple as three steps.
+                Tres pasos claros que conectan bodega, despacho y quirófano sin
+                fricción.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-16 md:gap-20">
@@ -268,12 +266,12 @@ export default function Home() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-24 items-center">
               <div className="space-y-8 md:space-y-12">
                 <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight">
-                  What Professionals Say
+                  Lo que dicen nuestros clientes
                 </h2>
                 <div className="relative pl-8 md:pl-12 border-l-8 border-black">
                   <div
                     className="flex gap-1 mb-6 md:mb-8"
-                    aria-label="5 out of 5 stars"
+                    aria-label="5 de 5 estrellas"
                   >
                     {Array.from({ length: 5 }).map((_, i) => (
                       <span
@@ -285,23 +283,25 @@ export default function Home() {
                       </span>
                     ))}
                   </div>
+                  {/* TODO: reemplazar con testimonio real de cliente */}
                   <blockquote className="text-xl sm:text-2xl md:text-3xl font-medium leading-relaxed mb-8 md:mb-10 italic">
-                    &ldquo;The reduction in visual noise allows our design
-                    team to focus on the work that actually matters. TaskGo is
-                    the architectural answer.&rdquo;
+                    &ldquo;Antes dependíamos de Excel y de llamadas para saber
+                    dónde estaba cada lote. Con Ness Digital tenemos toda la
+                    operación en una sola pantalla — despachamos más cirugías
+                    con el mismo equipo y dejamos de perder materiales.&rdquo;
                   </blockquote>
                   <div className="flex items-center gap-6">
                     <Image
                       src={TESTIMONIAL_AVATAR}
-                      alt="Julian Vane"
+                      alt="Cliente de Ness Digital"
                       width={64}
                       height={64}
                       className="w-16 h-16 rounded-full grayscale object-cover"
                     />
                     <div>
-                      <div className="text-xl font-bold">Julian Vane</div>
+                      <div className="text-xl font-bold">[Nombre del cliente]</div>
                       <div className="text-on-surface-variant font-medium">
-                        Creative Director, ArchStudio
+                        Jefe de Logística, [Empresa distribuidora]
                       </div>
                     </div>
                   </div>
@@ -312,7 +312,7 @@ export default function Home() {
                   <div className="aspect-square rounded-3xl overflow-hidden grayscale relative">
                     <Image
                       src={STUDIO_IMG}
-                      alt="Studio environment"
+                      alt="Operación logística"
                       fill
                       sizes="(min-width: 768px) 25vw, 45vw"
                       className="object-cover"
@@ -323,7 +323,7 @@ export default function Home() {
                       98%
                     </div>
                     <div className="text-[10px] font-black uppercase tracking-widest text-on-surface-variant">
-                      Satisfaction
+                      Satisfacción
                     </div>
                   </div>
                 </div>
@@ -333,13 +333,13 @@ export default function Home() {
                       24/7
                     </div>
                     <div className="text-[10px] font-black uppercase tracking-widest opacity-60">
-                      Support
+                      Soporte
                     </div>
                   </div>
                   <div className="aspect-4/5 rounded-3xl overflow-hidden grayscale relative">
                     <Image
                       src={PRODUCT_DETAIL_IMG}
-                      alt="Product detail"
+                      alt="Detalle de la plataforma"
                       fill
                       sizes="(min-width: 768px) 25vw, 45vw"
                       className="object-cover"
@@ -351,87 +351,49 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Pricing */}
-        <section id="pricing" className="executive-slide bg-surface-container scroll-mt-24">
+        {/* Demo */}
+        <section id="demo" className="executive-slide bg-surface-container scroll-mt-24">
           <div className="content-container">
-            <div className="text-center mb-20 md:mb-24">
+            <div className="text-center mb-16 md:mb-20">
               <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-6">
-                Transparent Pricing
+                Conozca Ness Digital en acción.
               </h2>
-              <p className="text-lg md:text-xl text-on-surface-variant max-w-xl mx-auto font-medium">
-                Simple tiers for teams of all sizes. Built to scale with your
-                growth.
+              <p className="text-lg md:text-xl text-on-surface-variant max-w-2xl mx-auto font-medium leading-relaxed">
+                Agende una demo personalizada de 30 minutos. Le mostramos la
+                plataforma con su flujo real de inventario, despacho y
+                cirugía — sin compromiso.
               </p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-4xl mx-auto">
-              <div className="bg-white p-10 md:p-14 rounded-3xl shadow-sm flex flex-col justify-between border border-black/5">
-                <div>
-                  <div className="text-xs font-black uppercase tracking-[0.3em] text-on-surface-variant mb-6 md:mb-10">
-                    Starter Plan
-                  </div>
-                  <div className="flex items-baseline gap-3 mb-8 md:mb-12">
-                    <span className="text-6xl font-extrabold tracking-tighter">
-                      $49
-                    </span>
-                    <span className="text-on-surface-variant font-bold">
-                      / month
-                    </span>
-                  </div>
-                  <ul className="space-y-4 md:space-y-6 mb-10 md:mb-16">
-                    {starterFeatures.map((f) => (
-                      <li
-                        key={f}
-                        className="flex items-center gap-4 text-lg font-medium"
-                      >
-                        <span className="material-symbols-outlined text-primary">
-                          check_circle
-                        </span>
-                        {f}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-                <button
-                  type="button"
-                  className="w-full py-5 bg-surface-container-high text-primary font-bold rounded-2xl text-lg hover:bg-black hover:text-white transition-all"
-                >
-                  Select Starter
-                </button>
+            <div className="max-w-3xl mx-auto bg-black text-white p-10 md:p-16 rounded-3xl shadow-[0_50px_100px_rgba(0,0,0,0.2)]">
+              <div className="text-xs font-black uppercase tracking-[0.3em] opacity-50 mb-8 md:mb-12">
+                Qué incluye la implementación
               </div>
-              <div className="bg-black text-white p-10 md:p-14 rounded-3xl shadow-[0_50px_100px_rgba(0,0,0,0.2)] flex flex-col justify-between relative overflow-hidden">
-                <div className="absolute top-0 right-0 px-8 py-3 bg-white text-black text-[10px] font-black uppercase tracking-widest translate-x-[20%] translate-y-[20%] rotate-45">
-                  Best Value
-                </div>
-                <div>
-                  <div className="text-xs font-black uppercase tracking-[0.3em] opacity-50 mb-6 md:mb-10">
-                    Professional Plan
-                  </div>
-                  <div className="flex items-baseline gap-3 mb-12 text-white">
-                    <span className="text-6xl font-extrabold tracking-tighter">
-                      $99
+              <ul className="space-y-4 md:space-y-6 mb-10 md:mb-14">
+                {demoFeatures.map((f) => (
+                  <li
+                    key={f}
+                    className="flex items-start gap-4 text-lg font-medium"
+                  >
+                    <span className="material-symbols-outlined text-white shrink-0">
+                      check_circle
                     </span>
-                    <span className="opacity-50 font-bold">/ month</span>
-                  </div>
-                  <ul className="space-y-4 md:space-y-6 mb-10 md:mb-16">
-                    {proFeatures.map((f) => (
-                      <li
-                        key={f}
-                        className="flex items-center gap-4 text-lg font-medium"
-                      >
-                        <span className="material-symbols-outlined text-white">
-                          check_circle
-                        </span>
-                        {f}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-                <button
-                  type="button"
-                  className="w-full py-5 bg-white text-black font-bold rounded-2xl text-lg hover:scale-[1.02] transition-transform"
+                    {f}
+                  </li>
+                ))}
+              </ul>
+              <div className="flex flex-col sm:flex-row gap-4 md:gap-6">
+                <a
+                  href="#cta"
+                  className="flex-1 text-center py-5 bg-white text-black font-bold rounded-2xl text-lg hover:scale-[1.02] transition-transform"
                 >
-                  Go Professional
-                </button>
+                  Agende su demo
+                </a>
+                <a
+                  href="#cta"
+                  className="flex-1 text-center py-5 border-2 border-white/20 text-white font-bold rounded-2xl text-lg hover:bg-white/10 transition-colors"
+                >
+                  Hable con ventas
+                </a>
               </div>
             </div>
           </div>
@@ -443,12 +405,12 @@ export default function Home() {
             <div className="flex flex-col md:flex-row items-center gap-16 md:gap-24">
               <div className="md:w-1/2">
                 <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-8 leading-tight">
-                  Effortless Tool Integrations
+                  Se conecta con las herramientas que ya usa.
                 </h2>
                 <p className="text-lg md:text-xl text-on-surface-variant font-medium mb-12 leading-relaxed">
-                  Connect TaskGo with your existing tech stack. Eliminate
-                  context switching and maintain a single source of truth
-                  across all platforms.
+                  Ness Digital se integra con su software contable, su correo
+                  corporativo y sus sistemas internos para que la información
+                  fluya sin capturas duplicadas.
                 </p>
                 <div className="space-y-4">
                   <div className="flex items-center gap-6 p-6 bg-surface-container-low rounded-2xl border border-black/5">
@@ -456,7 +418,7 @@ export default function Home() {
                       <span className="material-symbols-outlined">cloud</span>
                     </div>
                     <span className="text-lg font-bold">
-                      Cloud Storage Integration
+                      Software contable y ERP
                     </span>
                   </div>
                   <div className="flex items-center gap-6 p-6 bg-surface-container-low rounded-2xl border border-black/5">
@@ -464,7 +426,7 @@ export default function Home() {
                       <span className="material-symbols-outlined">mail</span>
                     </div>
                     <span className="text-lg font-bold">
-                      Seamless Email Sync
+                      Correo y notificaciones
                     </span>
                   </div>
                 </div>
@@ -478,7 +440,7 @@ export default function Home() {
                   }}
                 />
                 <div className="z-20 w-32 h-32 md:w-40 md:h-40 bg-black text-white rounded-4xl flex items-center justify-center shadow-2xl">
-                  <span className="text-2xl md:text-3xl font-black">TG</span>
+                  <span className="text-2xl md:text-3xl font-black">ND</span>
                 </div>
                 <div className="absolute top-1/4 right-0 md:-right-4 w-16 h-16 md:w-20 md:h-20 bg-white shadow-xl rounded-2xl flex items-center justify-center border border-black/5">
                   <span className="material-symbols-outlined text-2xl md:text-3xl">
@@ -496,10 +458,10 @@ export default function Home() {
         </section>
 
         {/* FAQ */}
-        <section className="executive-slide bg-surface">
+        <section id="faq" className="executive-slide bg-surface scroll-mt-24">
           <div className="content-container">
             <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-16 md:mb-20 text-center">
-              Frequently Asked Questions
+              Preguntas frecuentes
             </h2>
             <Faq />
           </div>
@@ -520,7 +482,7 @@ export default function Home() {
             </div>
             <div className="relative z-10">
               <h2 className="text-4xl sm:text-5xl md:text-8xl font-extrabold text-white mb-12 md:mb-16 leading-tight tracking-tight">
-                Let&apos;s create digital experiences that deliver results.
+                Lleve el control total de su operación quirúrgica.
               </h2>
               <div className="flex flex-col sm:flex-row gap-6 md:gap-8 justify-center items-center">
                 <a
@@ -528,13 +490,13 @@ export default function Home() {
                   className="px-10 md:px-16 py-5 md:py-6 bg-white text-black font-black text-lg md:text-xl rounded-2xl signature-cta hover:scale-105 transition-transform"
                   style={{ background: "#fff", color: "#000" }}
                 >
-                  Get Started Now
+                  Agende una demo
                 </a>
                 <a
                   href="#"
                   className="px-10 md:px-16 py-5 md:py-6 border-2 border-white/20 text-white font-black text-lg md:text-xl rounded-2xl hover:bg-white/10 transition-colors"
                 >
-                  Contact Sales
+                  Hable con ventas
                 </a>
               </div>
             </div>
@@ -545,24 +507,24 @@ export default function Home() {
       <footer className="py-16 md:py-20 px-6 md:px-8 bg-white border-t border-black/5">
         <div className="content-container flex flex-col md:flex-row justify-between items-center gap-8 md:gap-12 font-bold uppercase tracking-widest text-[10px] text-on-surface-variant">
           <div className="text-2xl font-black tracking-tighter text-black lowercase">
-            taskgo.
+            ness digital.
           </div>
           <nav className="flex flex-wrap justify-center gap-8 md:gap-12">
             <a className="hover:text-black transition-colors" href="#">
-              Privacy
+              Privacidad
             </a>
             <a className="hover:text-black transition-colors" href="#">
-              Terms
+              Términos
             </a>
             <a className="hover:text-black transition-colors" href="#">
-              Security
+              Seguridad
             </a>
             <a className="hover:text-black transition-colors" href="#">
-              Contact
+              Contacto
             </a>
           </nav>
           <div className="normal-case tracking-normal opacity-50 font-medium">
-            © 2026 TaskGo Technologies. All rights reserved.
+            © 2026 Ness Digital. Todos los derechos reservados.
           </div>
         </div>
       </footer>

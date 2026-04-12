@@ -3,9 +3,9 @@
 import { useEffect, useState } from "react";
 
 const links = [
-  { label: "Features", href: "#features", active: true },
-  { label: "Workflows", href: "#workflows" },
-  { label: "Pricing", href: "#pricing" },
+  { label: "Plataforma", href: "#workflows", active: true },
+  { label: "Demo", href: "#demo" },
+  { label: "Preguntas", href: "#faq" },
 ];
 
 export function Nav() {
@@ -22,7 +22,7 @@ export function Nav() {
     <nav className="fixed top-0 w-full z-50 bg-white/70 backdrop-blur-2xl border-b border-black/5">
       <div className="flex justify-between items-center px-6 md:px-10 py-5 max-w-7xl mx-auto">
         <a href="#" className="text-2xl font-black tracking-tighter">
-          TaskGo
+          Ness Digital
         </a>
 
         <div className="hidden md:flex gap-10 items-center text-sm font-bold uppercase tracking-widest text-on-surface-variant">
@@ -46,11 +46,11 @@ export function Nav() {
             href="#cta"
             className="hidden sm:inline-flex px-8 py-2.5 bg-black text-white text-sm font-bold rounded-full signature-cta hover:scale-105 transition-transform"
           >
-            Get Started
+            Agende una demo
           </a>
           <button
             type="button"
-            aria-label={open ? "Close menu" : "Open menu"}
+            aria-label={open ? "Cerrar menú" : "Abrir menú"}
             aria-expanded={open}
             className="md:hidden w-11 h-11 inline-flex items-center justify-center rounded-full border border-black/10 hover:bg-black hover:text-white transition-colors"
             onClick={() => setOpen((v) => !v)}
@@ -80,7 +80,7 @@ export function Nav() {
               onClick={() => setOpen(false)}
               className="mt-4 inline-flex items-center justify-center px-8 py-4 bg-black text-white rounded-full signature-cta"
             >
-              Get Started
+              Agende una demo
             </a>
           </div>
         </div>
