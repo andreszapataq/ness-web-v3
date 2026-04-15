@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { Nav } from "@/components/sections/nav";
 import { Faq } from "@/components/sections/faq";
+import { Logo } from "@/components/ui/logo";
 
 const HERO_IMG = "/images/hero-dashboard.webp";
 const FEATURE_IMG = "/images/feature-inventario-bodega.webp";
@@ -290,7 +291,7 @@ export default function Home() {
                     <div>
                       <div className="text-xl font-bold">Victor Cadena</div>
                       <div className="text-on-surface-variant font-medium">
-                        Dir. de Biológicos, BioTissue Colombia
+                        Dir. de Biológicos, QNA Medical
                       </div>
                     </div>
                   </div>
@@ -495,9 +496,9 @@ export default function Home() {
 
       <footer className="py-16 md:py-20 px-6 md:px-8 bg-white border-t border-black/5">
         <div className="content-container flex flex-col md:flex-row justify-between items-center gap-8 md:gap-12 font-bold uppercase tracking-widest text-[10px] text-on-surface-variant">
-          <div className="text-2xl font-black tracking-tighter text-black lowercase">
-            ness digital.
-          </div>
+          <a href="#" aria-label="Ness Digital — inicio" className="inline-flex items-center text-black">
+            <Logo className="h-8 w-auto" />
+          </a>
           <nav className="flex flex-wrap justify-center gap-8 md:gap-12">
             <a className="hover:text-black transition-colors" href="#">
               Privacidad
