@@ -430,7 +430,7 @@ export default function Home() {
                   }}
                 />
                 <div className="z-20 w-32 h-32 md:w-40 md:h-40 bg-black text-white rounded-4xl flex items-center justify-center shadow-2xl">
-                  <span className="text-2xl md:text-3xl font-black">ND</span>
+                  <Logo className="h-6 md:h-7 w-auto" />
                 </div>
                 <div className="absolute top-1/4 right-0 md:-right-4 w-16 h-16 md:w-20 md:h-20 bg-white shadow-xl rounded-2xl flex items-center justify-center border border-black/5">
                   <span className="material-symbols-outlined text-2xl md:text-3xl">
