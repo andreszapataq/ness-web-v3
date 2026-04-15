@@ -290,7 +290,7 @@ export default function Home() {
                     <div>
                       <div className="text-xl font-bold">Victor Cadena</div>
                       <div className="text-on-surface-variant font-medium">
-                        Dir. Nacional, BioTissue Colombia
+                        Dir. de Biológicos, BioTissue Colombia
                       </div>
                     </div>
                   </div>
