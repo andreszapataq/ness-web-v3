@@ -299,7 +299,7 @@ export default function Home() {
               </div>
               <div className="grid grid-cols-2 gap-6">
                 <div className="space-y-6">
-                  <div className="aspect-square rounded-3xl overflow-hidden grayscale relative">
+                  <div className="aspect-square rounded-3xl overflow-hidden saturate-[.6] relative">
                     <Image
                       src={STUDIO_IMG}
                       alt="Operación logística"
@@ -326,7 +326,7 @@ export default function Home() {
                       Soporte
                     </div>
                   </div>
-                  <div className="aspect-4/5 rounded-3xl overflow-hidden grayscale relative">
+                  <div className="aspect-4/5 rounded-3xl overflow-hidden saturate-[.6] relative">
                     <Image
                       src={PRODUCT_DETAIL_IMG}
                       alt="Detalle de la plataforma"
