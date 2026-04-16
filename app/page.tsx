@@ -49,7 +49,7 @@ export default function Home() {
         {/* Hero */}
         <section
           id="features"
-          className="executive-slide pt-32 md:pt-64! scroll-mt-24"
+          className="executive-slide pt-32 md:pt-48! scroll-mt-24"
         >
           <div className="content-container text-center">
             <div className="mb-6 md:mb-8 inline-block px-6 py-2 bg-black text-white rounded-full reveal-up">
@@ -58,13 +58,13 @@ export default function Home() {
               </span>
             </div>
             <h1
-              className="text-4xl sm:text-6xl md:text-8xl font-extrabold tracking-tight text-primary mb-6 md:mb-10 leading-[1.1] reveal-up"
+              className="text-4xl sm:text-5xl md:text-7xl font-extrabold tracking-tight text-primary mb-6 md:mb-10 leading-[1.1] reveal-up"
               style={{ animationDelay: "80ms" }}
             >
               Trazabilidad total, del lote a la cirugía.
             </h1>
             <p
-              className="text-base sm:text-xl md:text-2xl text-on-surface-variant max-w-3xl mx-auto mb-10 md:mb-16 leading-relaxed font-medium reveal-up"
+              className="text-base sm:text-lg md:text-xl text-on-surface-variant max-w-3xl mx-auto mb-10 md:mb-14 leading-relaxed font-medium reveal-up"
               style={{ animationDelay: "160ms" }}
             >
               Ness Digital reemplaza sus Excel y procesos manuales por una
@@ -73,18 +73,18 @@ export default function Home() {
               el momento correcto.
             </p>
             <div
-              className="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center mb-14 md:mb-24 reveal-up"
+              className="flex flex-col sm:flex-row gap-4 md:gap-5 justify-center mb-12 md:mb-20 reveal-up"
               style={{ animationDelay: "240ms" }}
             >
               <a
                 href="#demo"
-                className="px-10 md:px-12 py-4 md:py-5 bg-black text-white font-bold rounded-2xl text-base md:text-lg signature-cta shadow-2xl hover:scale-[1.02] transition-transform"
+                className="px-8 md:px-10 py-3.5 md:py-4 bg-black text-white font-bold rounded-2xl text-base md:text-lg signature-cta shadow-2xl hover:scale-[1.02] transition-transform"
               >
                 Agende una demo
               </a>
               <a
                 href="#workflows"
-                className="px-10 md:px-12 py-4 md:py-5 bg-white border-2 border-black/5 text-primary font-bold rounded-2xl text-base md:text-lg hover:bg-surface-container transition-colors"
+                className="px-8 md:px-10 py-3.5 md:py-4 bg-white border-2 border-black/5 text-primary font-bold rounded-2xl text-base md:text-lg hover:bg-surface-container transition-colors"
               >
                 Conozca la plataforma
               </a>
@@ -459,27 +459,27 @@ export default function Home() {
         {/* Final CTA */}
         <section id="cta" className="executive-slide scroll-mt-24">
           <div
-            className="content-container rounded-[3rem] md:rounded-[4rem] p-12 sm:p-20 md:p-40 text-center relative overflow-hidden shadow-[0_80px_150px_rgba(0,0,0,0.3)]"
+            className="content-container rounded-3xl md:rounded-[3rem] p-10 sm:p-16 md:p-24 text-center relative overflow-hidden shadow-[0_80px_150px_rgba(0,0,0,0.3)]"
             style={{
               background:
                 "linear-gradient(45deg, #333c46 0%, #000000 35%)",
             }}
           >
             <div className="relative z-10">
-              <h2 className="text-4xl sm:text-5xl md:text-8xl font-extrabold text-white mb-12 md:mb-16 leading-tight tracking-tight">
+              <h2 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-white mb-10 md:mb-12 leading-tight tracking-tight">
                 Lleve el control total de su operación quirúrgica.
               </h2>
-              <div className="flex flex-col sm:flex-row gap-6 md:gap-8 justify-center items-center">
+              <div className="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center items-center">
                 <a
                   href="#"
-                  className="px-10 md:px-16 py-5 md:py-6 bg-white text-black font-black text-lg md:text-xl rounded-2xl signature-cta hover:scale-105 transition-transform"
+                  className="px-8 md:px-12 py-4 md:py-5 bg-white text-black font-black text-base md:text-lg rounded-2xl signature-cta hover:scale-105 transition-transform"
                   style={{ background: "#fff", color: "#000" }}
                 >
                   Agende una demo
                 </a>
                 <a
                   href="#"
-                  className="px-10 md:px-16 py-5 md:py-6 border-2 border-white/20 text-white font-black text-lg md:text-xl rounded-2xl hover:bg-white/10 transition-colors"
+                  className="px-8 md:px-12 py-4 md:py-5 border-2 border-white/20 text-white font-black text-base md:text-lg rounded-2xl hover:bg-white/10 transition-colors"
                 >
                   Hable con ventas
                 </a>
