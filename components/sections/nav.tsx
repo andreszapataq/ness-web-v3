@@ -45,6 +45,14 @@ export function Nav() {
           >
             Agende una demo
           </a>
+          <a
+            href="https://app.nessdigital.co/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hidden sm:inline-flex text-sm font-bold uppercase tracking-widest text-on-surface-variant hover:text-black transition-colors"
+          >
+            Iniciar sesión
+          </a>
           <button
             type="button"
             aria-label={open ? "Cerrar menú" : "Abrir menú"}
@@ -78,6 +86,15 @@ export function Nav() {
               className="mt-4 inline-flex items-center justify-center px-8 py-4 bg-black text-white rounded-full signature-cta"
             >
               Agende una demo
+            </a>
+            <a
+              href="https://app.nessdigital.co/"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => setOpen(false)}
+              className="mt-2 py-3 text-on-surface-variant"
+            >
+              Iniciar sesión
             </a>
           </div>
         </div>
