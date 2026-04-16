@@ -8,7 +8,6 @@ const FEATURE_IMG = "/images/feature-inventario-bodega.webp";
 const TESTIMONIAL_AVATAR = "/images/testimonial-avatar.webp";
 const STUDIO_IMG = "/images/operacion-logistica.webp";
 const PRODUCT_DETAIL_IMG = "/images/plataforma-detalle.webp";
-const TEXTURE_IMG = "/images/cta-textura.webp";
 
 const stats = [
   { value: "9x", label: "Procesos más rápidos" },
@@ -466,16 +465,6 @@ export default function Home() {
                 "linear-gradient(45deg, #333c46 0%, #000000 35%)",
             }}
           >
-            <div className="absolute inset-0 opacity-20 pointer-events-none">
-              <Image
-                src={TEXTURE_IMG}
-                alt=""
-                fill
-                sizes="100vw"
-                className="object-cover"
-                aria-hidden
-              />
-            </div>
             <div className="relative z-10">
               <h2 className="text-4xl sm:text-5xl md:text-8xl font-extrabold text-white mb-12 md:mb-16 leading-tight tracking-tight">
                 Lleve el control total de su operación quirúrgica.
