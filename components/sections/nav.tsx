@@ -49,9 +49,9 @@ export function Nav() {
             href="https://app.nessdigital.co/"
             target="_blank"
             rel="noopener noreferrer"
-            className="hidden sm:inline-flex text-sm font-bold uppercase tracking-widest text-on-surface-variant hover:text-black transition-colors"
+            className="hidden sm:inline-flex px-8 py-2.5 text-sm font-bold rounded-full border border-black/15 text-black/75 hover:border-black/5 hover:text-black hover:bg-black/5 transition-colors"
           >
-            Iniciar sesión
+            Ingresar
           </a>
           <button
             type="button"
@@ -92,9 +92,9 @@ export function Nav() {
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => setOpen(false)}
-              className="mt-2 py-3 text-on-surface-variant"
+              className="mt-2 inline-flex items-center justify-center px-8 py-4 rounded-full border border-black/15 text-black/75 normal-case tracking-normal hover:border-black/5 hover:text-black hover:bg-black/5 transition-colors"
             >
-              Iniciar sesión
+              Ingresar
             </a>
           </div>
         </div>
