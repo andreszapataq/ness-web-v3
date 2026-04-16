@@ -2,6 +2,8 @@ import Image from "next/image";
 import { Nav } from "@/components/sections/nav";
 import { Faq } from "@/components/sections/faq";
 import { Logo } from "@/components/ui/logo";
+import { Reveal } from "@/components/motion/reveal";
+import { StaggerGroup, StaggerItem } from "@/components/motion/stagger";
 
 const HERO_IMG = "/images/hero-dashboard.webp";
 const FEATURE_IMG = "/images/feature-inventario-bodega.webp";
@@ -114,7 +116,7 @@ export default function Home() {
           className="executive-slide bg-surface-container-low scroll-mt-24"
         >
           <div className="content-container">
-            <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 md:mb-20 gap-6 md:gap-8">
+            <Reveal className="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 md:mb-20 gap-6 md:gap-8">
               <div className="max-w-xl">
                 <h2 className="text-4xl sm:text-5xl font-extrabold tracking-tight text-primary mb-6 leading-tight">
                   Una sola plataforma para toda su operación logística y
@@ -126,9 +128,9 @@ export default function Home() {
                 </p>
               </div>
               <div className="hidden md:block h-px bg-outline-variant/30 grow mx-12 mb-6" />
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10">
-              <div className="bg-white p-10 md:p-12 rounded-3xl shadow-sm border border-black/5 flex flex-col h-full">
+            </Reveal>
+            <StaggerGroup stagger={0.12} className="grid grid-cols-1 md:grid-cols-2 md:grid-rows-2 gap-6 md:gap-10">
+              <StaggerItem className="md:row-span-2 bg-white p-10 md:p-12 rounded-3xl shadow-sm border border-black/5 flex flex-col h-full">
                 <div className="w-16 h-16 bg-black rounded-2xl flex items-center justify-center mb-8">
                   <span className="material-symbols-outlined text-white text-3xl">
                     grid_view
@@ -151,9 +153,8 @@ export default function Home() {
                     className="object-cover"
                   />
                 </div>
-              </div>
-              <div className="space-y-6 md:space-y-10 flex flex-col">
-                <div className="bg-black text-white p-10 md:p-12 rounded-3xl shadow-2xl flex flex-col justify-between flex-1 min-h-80">
+              </StaggerItem>
+              <StaggerItem className="bg-black text-white p-10 md:p-12 rounded-3xl shadow-2xl flex flex-col justify-between min-h-80">
                   <div>
                     <span className="material-symbols-outlined text-4xl mb-6 opacity-70">
                       bolt
@@ -175,31 +176,33 @@ export default function Home() {
                       arrow_forward
                     </span>
                   </a>
-                </div>
-                <div className="bg-white p-10 md:p-12 rounded-3xl shadow-sm border border-black/5 flex flex-col flex-1 min-h-60">
+              </StaggerItem>
+              <StaggerItem className="bg-white p-10 md:p-12 rounded-3xl shadow-sm border border-black/5 flex flex-col min-h-60">
                   <span className="material-symbols-outlined text-4xl mb-6 text-primary">
                     forum
                   </span>
                   <h3 className="text-2xl md:text-3xl font-bold mb-4">
                     Trazabilidad y gasto de lotes
                   </h3>
-                  <p className="text-on-surface-variant text-lg">
-                    Siga el estado de cada remisión, libere lotes solo con la
-                    firma del cliente y registre el gasto en cirugía sin
-                    duplicar trabajo.
-                  </p>
-                </div>
-              </div>
-            </div>
+                <p className="text-on-surface-variant text-lg">
+                  Siga el estado de cada remisión, libere lotes solo con la
+                  firma del cliente y registre el gasto en cirugía sin
+                  duplicar trabajo.
+                </p>
+              </StaggerItem>
+            </StaggerGroup>
           </div>
         </section>
 
         {/* Stats */}
         <section className="executive-slide">
           <div className="content-container">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-12">
+            <StaggerGroup
+              stagger={0.08}
+              className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-12"
+            >
               {stats.map((s, i) => (
-                <div
+                <StaggerItem
                   key={s.label}
                   className={`text-center p-6 md:p-8 ${
                     i > 0 ? "md:border-l border-black/5" : ""
@@ -211,16 +214,16 @@ export default function Home() {
                   <div className="text-[10px] md:text-sm font-black uppercase tracking-[0.2em] text-on-surface-variant">
                     {s.label}
                   </div>
-                </div>
+                </StaggerItem>
               ))}
-            </div>
+            </StaggerGroup>
           </div>
         </section>
 
         {/* Built for scale */}
         <section className="executive-slide bg-black text-white">
           <div className="content-container">
-            <div className="text-center mb-20 md:mb-32">
+            <Reveal className="text-center mb-20 md:mb-32">
               <h2 className="text-4xl md:text-6xl font-extrabold tracking-tight mb-8">
                 Diseñado para crecer con su operación.
               </h2>
@@ -228,10 +231,13 @@ export default function Home() {
                 Tres pasos claros que conectan bodega, despacho y quirófano sin
                 fricción.
               </p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-16 md:gap-20">
+            </Reveal>
+            <StaggerGroup
+              stagger={0.15}
+              className="grid grid-cols-1 md:grid-cols-3 gap-16 md:gap-20"
+            >
               {steps.map((s) => (
-                <div key={s.n} className="relative group">
+                <StaggerItem key={s.n} y={16} className="relative group">
                   <div className="text-[120px] font-black opacity-10 absolute -top-16 -left-8 pointer-events-none group-hover:opacity-20 transition-opacity select-none">
                     {s.n}
                   </div>
@@ -243,9 +249,9 @@ export default function Home() {
                       {s.body}
                     </p>
                   </div>
-                </div>
+                </StaggerItem>
               ))}
-            </div>
+            </StaggerGroup>
           </div>
         </section>
 
@@ -253,7 +259,7 @@ export default function Home() {
         <section className="executive-slide">
           <div className="content-container">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-24 items-center">
-              <div className="space-y-8 md:space-y-12">
+              <Reveal className="space-y-8 md:space-y-12">
                 <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight">
                   Lo que dicen nuestros clientes
                 </h2>
@@ -295,8 +301,8 @@ export default function Home() {
                     </div>
                   </div>
                 </div>
-              </div>
-              <div className="grid grid-cols-2 gap-6">
+              </Reveal>
+              <Reveal delay={0.15} className="grid grid-cols-2 gap-6">
                 <div className="space-y-6">
                   <div className="aspect-square rounded-3xl overflow-hidden saturate-[.6] relative">
                     <Image
@@ -335,7 +341,7 @@ export default function Home() {
                     />
                   </div>
                 </div>
-              </div>
+              </Reveal>
             </div>
           </div>
         </section>
@@ -343,7 +349,7 @@ export default function Home() {
         {/* Demo */}
         <section id="demo" className="executive-slide bg-surface-container scroll-mt-24">
           <div className="content-container">
-            <div className="text-center mb-16 md:mb-20">
+            <Reveal className="text-center mb-16 md:mb-20">
               <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-6">
                 Conozca Ness Digital en acción.
               </h2>
@@ -352,24 +358,32 @@ export default function Home() {
                 plataforma con su flujo real de inventario, despacho y
                 cirugía — sin compromiso.
               </p>
-            </div>
-            <div className="max-w-3xl mx-auto bg-black text-white p-10 md:p-16 rounded-3xl shadow-[0_50px_100px_rgba(0,0,0,0.2)]">
+            </Reveal>
+            <Reveal
+              delay={0.1}
+              className="max-w-3xl mx-auto bg-black text-white p-10 md:p-16 rounded-3xl shadow-[0_50px_100px_rgba(0,0,0,0.2)]"
+            >
               <div className="text-xs font-black uppercase tracking-[0.3em] opacity-50 mb-8 md:mb-12">
                 Qué incluye la implementación
               </div>
-              <ul className="space-y-4 md:space-y-6 mb-10 md:mb-14">
+              <StaggerGroup
+                as="ul"
+                stagger={0.06}
+                className="space-y-4 md:space-y-6 mb-10 md:mb-14"
+              >
                 {demoFeatures.map((f) => (
-                  <li
+                  <StaggerItem
                     key={f}
+                    as="li"
                     className="flex items-start gap-4 text-lg font-medium"
                   >
                     <span className="material-symbols-outlined text-white shrink-0">
                       check_circle
                     </span>
                     {f}
-                  </li>
+                  </StaggerItem>
                 ))}
-              </ul>
+              </StaggerGroup>
               <div className="flex flex-col sm:flex-row gap-4 md:gap-6">
                 <a
                   href="#cta"
@@ -384,7 +398,7 @@ export default function Home() {
                   Hable con ventas
                 </a>
               </div>
-            </div>
+            </Reveal>
           </div>
         </section>
 
@@ -393,41 +407,41 @@ export default function Home() {
           <div className="content-container">
             <div className="flex flex-col md:flex-row items-center gap-16 md:gap-24">
               <div className="md:w-1/2">
-                <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-8 leading-tight">
-                  Se conecta con las herramientas que ya usa.
-                </h2>
-                <p className="text-lg md:text-xl text-on-surface-variant font-medium mb-12 leading-relaxed">
-                  Ness Digital se integra con su software contable, su correo
-                  corporativo y sus sistemas internos para que la información
-                  fluya sin capturas duplicadas.
-                </p>
-                <div className="space-y-4">
-                  <div className="flex items-center gap-6 p-6 bg-surface-container-low rounded-2xl border border-black/5">
+                <Reveal>
+                  <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-8 leading-tight">
+                    Se conecta con las herramientas que ya usa.
+                  </h2>
+                  <p className="text-lg md:text-xl text-on-surface-variant font-medium mb-12 leading-relaxed">
+                    Ness Digital se integra con su software contable, su correo
+                    corporativo y sus sistemas internos para que la información
+                    fluya sin capturas duplicadas.
+                  </p>
+                </Reveal>
+                <StaggerGroup stagger={0.1} className="space-y-4">
+                  <StaggerItem className="flex items-center gap-6 p-6 bg-surface-container-low rounded-2xl border border-black/5">
                     <div className="w-12 h-12 bg-black rounded-xl flex items-center justify-center text-white shrink-0">
                       <span className="material-symbols-outlined">cloud</span>
                     </div>
                     <span className="text-lg font-bold">
                       Software contable y ERP
                     </span>
-                  </div>
-                  <div className="flex items-center gap-6 p-6 bg-surface-container-low rounded-2xl border border-black/5">
+                  </StaggerItem>
+                  <StaggerItem className="flex items-center gap-6 p-6 bg-surface-container-low rounded-2xl border border-black/5">
                     <div className="w-12 h-12 bg-black rounded-xl flex items-center justify-center text-white shrink-0">
                       <span className="material-symbols-outlined">mail</span>
                     </div>
                     <span className="text-lg font-bold">
                       Correo y notificaciones
                     </span>
-                  </div>
-                </div>
+                  </StaggerItem>
+                </StaggerGroup>
               </div>
-              <div className="md:w-1/2 relative h-105 md:h-125 w-full flex items-center justify-center">
+              <Reveal
+                delay={0.2}
+                className="md:w-1/2 relative h-105 md:h-125 w-full flex items-center justify-center"
+              >
                 <div className="absolute w-80 h-80 md:w-112.5 md:h-112.5 border border-black/5 rounded-full" />
-                <div
-                  className="absolute w-55 h-55 md:w-75 md:h-75 border border-black/10 rounded-full"
-                  style={{
-                    animation: "slow-spin 20s linear infinite",
-                  }}
-                />
+                <div className="slow-spin absolute w-55 h-55 md:w-75 md:h-75 border border-black/10 rounded-full" />
                 <div className="z-20 w-32 h-32 md:w-40 md:h-40 bg-black text-white rounded-4xl flex items-center justify-center shadow-2xl">
                   <Logo className="h-6 md:h-7 w-auto" />
                 </div>
@@ -441,7 +455,7 @@ export default function Home() {
                     database
                   </span>
                 </div>
-              </div>
+              </Reveal>
             </div>
           </div>
         </section>
@@ -449,9 +463,9 @@ export default function Home() {
         {/* FAQ */}
         <section id="faq" className="executive-slide bg-surface scroll-mt-24">
           <div className="content-container">
-            <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-16 md:mb-20 text-center">
+            <Reveal as="h2" className="text-4xl md:text-5xl font-extrabold tracking-tight mb-16 md:mb-20 text-center">
               Preguntas frecuentes
-            </h2>
+            </Reveal>
             <Faq />
           </div>
         </section>
@@ -465,7 +479,7 @@ export default function Home() {
                 "linear-gradient(45deg, #333c46 0%, #000000 35%)",
             }}
           >
-            <div className="relative z-10">
+            <Reveal y={32} duration={1.0} className="relative z-10">
               <h2 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-white mb-10 md:mb-12 leading-tight tracking-tight">
                 Lleve el control total de su operación quirúrgica.
               </h2>
@@ -484,7 +498,7 @@ export default function Home() {
                   Hable con ventas
                 </a>
               </div>
-            </div>
+            </Reveal>
           </div>
         </section>
       </main>

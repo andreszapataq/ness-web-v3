@@ -145,3 +145,21 @@
     transform: rotate(360deg);
   }
 }
+
+.slow-spin {
+  animation: slow-spin 20s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .reveal-up {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+  .slow-spin {
+    animation: none !important;
+  }
+}
