@@ -459,7 +459,13 @@ export default function Home() {
 
         {/* Final CTA */}
         <section id="cta" className="executive-slide scroll-mt-24">
-          <div className="content-container bg-black rounded-[3rem] md:rounded-[4rem] p-12 sm:p-20 md:p-40 text-center relative overflow-hidden shadow-[0_80px_150px_rgba(0,0,0,0.3)]">
+          <div
+            className="content-container rounded-[3rem] md:rounded-[4rem] p-12 sm:p-20 md:p-40 text-center relative overflow-hidden shadow-[0_80px_150px_rgba(0,0,0,0.3)]"
+            style={{
+              background:
+                "linear-gradient(45deg, #333c46 0%, #000000 35%)",
+            }}
+          >
             <div className="absolute inset-0 opacity-20 pointer-events-none">
               <Image
                 src={TEXTURE_IMG}
