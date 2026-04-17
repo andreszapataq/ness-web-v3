@@ -60,11 +60,23 @@ export function Nav() {
             type="button"
             aria-label={open ? "Cerrar menú" : "Abrir menú"}
             aria-expanded={open}
-            className="lg:hidden w-11 h-11 inline-flex items-center justify-center rounded-full border border-black/10 hover:bg-black hover:text-white transition-colors"
+            data-open={open}
+            className="group lg:hidden relative w-11 h-11 inline-flex items-center justify-center rounded-full border border-black/10 text-black transition-[background-color,border-color,transform,color] duration-300 ease-out hover:bg-black hover:text-white active:scale-90 data-[open=true]:bg-black data-[open=true]:text-white data-[open=true]:border-black"
             onClick={() => setOpen((v) => !v)}
           >
-            <span className="material-symbols-outlined">
-              {open ? "close" : "menu"}
+            <span className="relative block w-5 h-5">
+              <span
+                aria-hidden
+                className="absolute left-0 right-0 top-1 h-[2px] bg-current rounded-full origin-center transition-transform duration-300 ease-[cubic-bezier(0.65,0,0.35,1)] group-data-[open=true]:translate-y-[7px] group-data-[open=true]:rotate-45"
+              />
+              <span
+                aria-hidden
+                className="absolute left-0 right-0 top-1/2 -translate-y-1/2 h-[2px] bg-current rounded-full transition-[opacity,transform] duration-200 ease-out group-data-[open=true]:opacity-0 group-data-[open=true]:scale-x-0"
+              />
+              <span
+                aria-hidden
+                className="absolute left-0 right-0 bottom-1 h-[2px] bg-current rounded-full origin-center transition-transform duration-300 ease-[cubic-bezier(0.65,0,0.35,1)] group-data-[open=true]:-translate-y-[7px] group-data-[open=true]:-rotate-45"
+              />
             </span>
           </button>
         </div>

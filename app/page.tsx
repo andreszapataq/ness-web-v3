@@ -515,7 +515,7 @@ export default function Home() {
           <Link href="/" aria-label="Ness Digital — inicio" className="inline-flex items-center text-black">
             <Logo className="h-8 w-auto" />
           </Link>
-          <nav className="flex flex-wrap justify-center gap-8 md:gap-12">
+          <nav className="flex flex-nowrap items-center justify-center gap-5 sm:gap-8 md:gap-12 tracking-[0.15em] sm:tracking-widest whitespace-nowrap">
             <a className="hover:text-black transition-colors" href="#">
               Privacidad
             </a>
