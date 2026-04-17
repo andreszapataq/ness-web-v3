@@ -14,6 +14,14 @@ export const metadata: Metadata = {
   title: "Ness Digital — Trazabilidad de dispositivos médicos",
   description:
     "Software para distribuidores de dispositivos médicos: gestione inventarios, despachos y cirugías con trazabilidad total de cada lote.",
+  openGraph: {
+    title: "Ness Digital — Trazabilidad de dispositivos médicos",
+    description:
+      "Software para distribuidores de dispositivos médicos: gestione inventarios, despachos y cirugías con trazabilidad total de cada lote.",
+    siteName: "Ness Digital",
+    locale: "es_CO",
+    type: "website",
+  },
 };
 
 export const viewport: Viewport = {
