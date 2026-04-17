@@ -26,7 +26,7 @@ export function Nav() {
           <Logo className="h-8 md:h-9 w-auto" />
         </a>
 
-        <div className="hidden md:flex gap-10 items-center text-sm font-bold uppercase tracking-widest text-on-surface-variant">
+        <div className="hidden lg:flex gap-10 items-center text-sm font-bold uppercase tracking-widest text-on-surface-variant">
           {links.map((l) => (
             <a
               key={l.label}
@@ -40,8 +40,10 @@ export function Nav() {
 
         <div className="flex items-center gap-3">
           <a
-            href="#cta"
-            className="hidden sm:inline-flex px-8 py-2.5 bg-black text-white text-sm font-bold rounded-full signature-cta hover:scale-105 transition-transform"
+            href="https://cal.com/nessdigital/30min"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hidden sm:inline-flex whitespace-nowrap px-6 lg:px-8 py-2.5 bg-black text-white text-sm font-bold rounded-full signature-cta hover:scale-105 transition-transform"
           >
             Agende una demo
           </a>
@@ -49,7 +51,7 @@ export function Nav() {
             href="https://app.nessdigital.co/"
             target="_blank"
             rel="noopener noreferrer"
-            className="hidden sm:inline-flex px-8 py-2.5 text-sm font-bold rounded-full border border-black/15 text-black/75 hover:border-black/5 hover:text-black hover:bg-black/5 transition-colors"
+            className="hidden lg:inline-flex whitespace-nowrap px-8 py-2.5 text-sm font-bold rounded-full border border-black/15 text-black/75 hover:border-black/5 hover:text-black hover:bg-black/5 transition-colors"
           >
             Ingresar
           </a>
@@ -57,7 +59,7 @@ export function Nav() {
             type="button"
             aria-label={open ? "Cerrar menú" : "Abrir menú"}
             aria-expanded={open}
-            className="md:hidden w-11 h-11 inline-flex items-center justify-center rounded-full border border-black/10 hover:bg-black hover:text-white transition-colors"
+            className="lg:hidden w-11 h-11 inline-flex items-center justify-center rounded-full border border-black/10 hover:bg-black hover:text-white transition-colors"
             onClick={() => setOpen((v) => !v)}
           >
             <span className="material-symbols-outlined">
@@ -68,7 +70,7 @@ export function Nav() {
       </div>
 
       {open && (
-        <div className="md:hidden border-t border-black/5 bg-white/95 backdrop-blur-2xl">
+        <div className="lg:hidden border-t border-black/5 bg-white/95 backdrop-blur-2xl">
           <div className="flex flex-col px-6 py-6 gap-2 text-base font-bold uppercase tracking-widest">
             {links.map((l) => (
               <a
@@ -81,7 +83,9 @@ export function Nav() {
               </a>
             ))}
             <a
-              href="#cta"
+              href="https://cal.com/nessdigital/30min"
+              target="_blank"
+              rel="noopener noreferrer"
               onClick={() => setOpen(false)}
               className="mt-4 inline-flex items-center justify-center px-8 py-4 bg-black text-white rounded-full signature-cta"
             >

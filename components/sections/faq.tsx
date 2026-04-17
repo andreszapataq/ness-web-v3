@@ -33,11 +33,11 @@ export function Faq() {
               type="button"
               aria-expanded={isOpen}
               onClick={() => setOpenIndex(isOpen ? null : i)}
-              className="w-full text-left p-10 flex justify-between items-center gap-6"
+              className="w-full text-left p-6 sm:p-8 md:p-10 flex justify-between items-center gap-4 md:gap-6"
             >
-              <h3 className="text-xl font-bold">{item.q}</h3>
+              <h3 className="text-base sm:text-lg md:text-xl font-bold">{item.q}</h3>
               <span
-                className={`material-symbols-outlined transition-transform duration-300 ${
+                className={`material-symbols-outlined transition-transform duration-300 shrink-0 ${
                   isOpen ? "rotate-90" : ""
                 }`}
                 aria-hidden
@@ -51,7 +51,7 @@ export function Faq() {
               }`}
             >
               <div className="overflow-hidden">
-                <p className="px-10 pb-10 -mt-2 text-on-surface-variant font-medium leading-relaxed">
+                <p className="px-6 pb-6 sm:px-8 sm:pb-8 md:px-10 md:pb-10 -mt-2 text-on-surface-variant font-medium leading-relaxed">
                   {item.a}
                 </p>
               </div>

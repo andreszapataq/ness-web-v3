@@ -79,14 +79,16 @@ export default function Home() {
               style={{ animationDelay: "240ms" }}
             >
               <a
-                href="#demo"
-                className="px-8 md:px-10 py-3.5 md:py-4 bg-black text-white font-bold rounded-2xl text-base md:text-lg signature-cta shadow-2xl hover:scale-[1.02] transition-transform"
+                href="https://cal.com/nessdigital/30min"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full sm:w-auto text-center px-8 md:px-10 py-3.5 md:py-4 bg-black text-white font-bold rounded-2xl text-base md:text-lg signature-cta shadow-2xl hover:scale-[1.02] transition-transform"
               >
                 Agende una demo
               </a>
               <a
                 href="#workflows"
-                className="px-8 md:px-10 py-3.5 md:py-4 bg-white border-2 border-black/5 text-primary font-bold rounded-2xl text-base md:text-lg hover:bg-surface-container transition-colors"
+                className="w-full sm:w-auto text-center px-8 md:px-10 py-3.5 md:py-4 bg-white border-2 border-black/5 text-primary font-bold rounded-2xl text-base md:text-lg hover:bg-surface-container transition-colors"
               >
                 Conozca la plataforma
               </a>
@@ -130,7 +132,7 @@ export default function Home() {
               <div className="hidden md:block h-px bg-outline-variant/30 grow mx-12 mb-6" />
             </Reveal>
             <StaggerGroup stagger={0.12} className="grid grid-cols-1 md:grid-cols-2 md:grid-rows-2 gap-6 md:gap-10">
-              <StaggerItem className="md:row-span-2 bg-white p-10 md:p-12 rounded-3xl shadow-sm border border-black/5 flex flex-col h-full">
+              <StaggerItem className="md:row-span-2 bg-white p-6 sm:p-8 md:p-12 rounded-3xl shadow-sm border border-black/5 flex flex-col h-full">
                 <div className="w-16 h-16 bg-black rounded-2xl flex items-center justify-center mb-8">
                   <span className="material-symbols-outlined text-white text-3xl">
                     grid_view
@@ -154,7 +156,7 @@ export default function Home() {
                   />
                 </div>
               </StaggerItem>
-              <StaggerItem className="bg-black text-white p-10 md:p-12 rounded-3xl shadow-2xl flex flex-col justify-between min-h-80">
+              <StaggerItem className="bg-black text-white p-6 sm:p-8 md:p-12 rounded-3xl shadow-2xl flex flex-col justify-between min-h-80">
                   <div>
                     <span className="material-symbols-outlined text-4xl mb-6 opacity-70">
                       bolt
@@ -177,7 +179,7 @@ export default function Home() {
                     </span>
                   </a>
               </StaggerItem>
-              <StaggerItem className="bg-white p-10 md:p-12 rounded-3xl shadow-sm border border-black/5 flex flex-col min-h-60">
+              <StaggerItem className="bg-white p-6 sm:p-8 md:p-12 rounded-3xl shadow-sm border border-black/5 flex flex-col min-h-60">
                   <span className="material-symbols-outlined text-4xl mb-6 text-primary">
                     forum
                   </span>
@@ -199,16 +201,16 @@ export default function Home() {
           <div className="content-container">
             <StaggerGroup
               stagger={0.08}
-              className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-12"
+              className="grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-12"
             >
               {stats.map((s, i) => (
                 <StaggerItem
                   key={s.label}
                   className={`text-center p-6 md:p-8 ${
-                    i > 0 ? "md:border-l border-black/5" : ""
-                  } ${i > 0 && i % 2 === 0 ? "md:border-l" : ""}`}
+                    i > 0 ? "lg:border-l border-black/5" : ""
+                  }`}
                 >
-                  <div className="text-5xl md:text-7xl font-extrabold text-primary mb-4 tracking-tighter">
+                  <div className="text-5xl md:text-6xl lg:text-7xl font-extrabold text-primary mb-4 tracking-tighter">
                     {s.value}
                   </div>
                   <div className="text-[10px] md:text-sm font-black uppercase tracking-[0.2em] text-on-surface-variant">
@@ -238,10 +240,10 @@ export default function Home() {
             >
               {steps.map((s) => (
                 <StaggerItem key={s.n} y={16} className="relative group">
-                  <div className="text-[120px] font-black opacity-10 absolute -top-16 -left-8 pointer-events-none group-hover:opacity-20 transition-opacity select-none">
+                  <div className="text-[72px] md:text-[120px] font-black opacity-10 absolute -top-8 md:-top-16 -left-2 md:-left-8 pointer-events-none group-hover:opacity-20 transition-opacity select-none leading-none">
                     {s.n}
                   </div>
-                  <div className="relative z-10">
+                  <div className="relative z-10 pt-8 md:pt-0">
                     <h3 className="text-2xl md:text-3xl font-bold mb-6">
                       {s.title}
                     </h3>
@@ -302,9 +304,9 @@ export default function Home() {
                   </div>
                 </div>
               </Reveal>
-              <Reveal delay={0.15} className="grid grid-cols-2 gap-6">
-                <div className="space-y-6">
-                  <div className="aspect-square rounded-3xl overflow-hidden saturate-[.6] relative">
+              <Reveal delay={0.15} className="grid grid-cols-2 gap-4 sm:gap-6">
+                <div className="space-y-4 sm:space-y-6">
+                  <div className="aspect-square rounded-2xl sm:rounded-3xl overflow-hidden saturate-[.6] relative">
                     <Image
                       src={STUDIO_IMG}
                       alt="Operación logística"
@@ -313,25 +315,25 @@ export default function Home() {
                       className="object-cover"
                     />
                   </div>
-                  <div className="bg-surface-container-high p-8 md:p-10 rounded-3xl text-center">
-                    <div className="text-3xl md:text-4xl font-black mb-2">
+                  <div className="bg-surface-container-high p-4 sm:p-8 md:p-10 rounded-2xl sm:rounded-3xl text-center">
+                    <div className="text-2xl sm:text-3xl md:text-4xl font-black mb-1 sm:mb-2">
                       98%
                     </div>
-                    <div className="text-[10px] font-black uppercase tracking-widest text-on-surface-variant">
+                    <div className="text-[9px] sm:text-[10px] font-black uppercase tracking-widest text-on-surface-variant">
                       Satisfacción
                     </div>
                   </div>
                 </div>
-                <div className="space-y-6 mt-12">
-                  <div className="bg-black text-white p-8 md:p-10 rounded-3xl text-center">
-                    <div className="text-3xl md:text-4xl font-black mb-2 text-white">
+                <div className="space-y-4 sm:space-y-6 mt-8 sm:mt-12">
+                  <div className="bg-black text-white p-4 sm:p-8 md:p-10 rounded-2xl sm:rounded-3xl text-center">
+                    <div className="text-2xl sm:text-3xl md:text-4xl font-black mb-1 sm:mb-2 text-white">
                       24/7
                     </div>
-                    <div className="text-[10px] font-black uppercase tracking-widest opacity-60">
+                    <div className="text-[9px] sm:text-[10px] font-black uppercase tracking-widest opacity-60">
                       Soporte
                     </div>
                   </div>
-                  <div className="aspect-4/5 rounded-3xl overflow-hidden saturate-[.6] relative">
+                  <div className="aspect-4/5 rounded-2xl sm:rounded-3xl overflow-hidden saturate-[.6] relative">
                     <Image
                       src={PRODUCT_DETAIL_IMG}
                       alt="Detalle de la plataforma"
@@ -361,7 +363,7 @@ export default function Home() {
             </Reveal>
             <Reveal
               delay={0.1}
-              className="max-w-3xl mx-auto bg-black text-white p-10 md:p-16 rounded-3xl shadow-[0_50px_100px_rgba(0,0,0,0.2)]"
+              className="max-w-3xl mx-auto bg-black text-white p-6 sm:p-10 md:p-16 rounded-3xl shadow-[0_50px_100px_rgba(0,0,0,0.2)]"
             >
               <div className="text-xs font-black uppercase tracking-[0.3em] opacity-50 mb-8 md:mb-12">
                 Qué incluye la implementación
@@ -386,13 +388,15 @@ export default function Home() {
               </StaggerGroup>
               <div className="flex flex-col sm:flex-row gap-4 md:gap-6">
                 <a
-                  href="#cta"
+                  href="https://cal.com/nessdigital/30min"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="flex-1 text-center py-5 bg-white text-black font-bold rounded-2xl text-lg hover:scale-[1.02] transition-transform"
                 >
                   Agende su demo
                 </a>
                 <a
-                  href="#cta"
+                  href="tel:+573113559747"
                   className="flex-1 text-center py-5 border-2 border-white/20 text-white font-bold rounded-2xl text-lg hover:bg-white/10 transition-colors"
                 >
                   Hable con ventas
@@ -438,20 +442,20 @@ export default function Home() {
               </div>
               <Reveal
                 delay={0.2}
-                className="md:w-1/2 relative h-105 md:h-125 w-full flex items-center justify-center"
+                className="md:w-1/2 relative h-96 sm:h-105 md:h-125 w-full flex items-center justify-center"
               >
-                <div className="absolute w-80 h-80 md:w-112.5 md:h-112.5 border border-black/5 rounded-full" />
-                <div className="slow-spin absolute w-55 h-55 md:w-75 md:h-75 border border-black/10 rounded-full" />
-                <div className="z-20 w-32 h-32 md:w-40 md:h-40 bg-black text-white rounded-4xl flex items-center justify-center shadow-2xl">
+                <div className="absolute w-72 h-72 sm:w-80 sm:h-80 md:w-112.5 md:h-112.5 border border-black/5 rounded-full" />
+                <div className="slow-spin absolute w-48 h-48 sm:w-55 sm:h-55 md:w-75 md:h-75 border border-black/10 rounded-full" />
+                <div className="z-20 w-28 h-28 sm:w-32 sm:h-32 md:w-40 md:h-40 bg-black text-white rounded-4xl flex items-center justify-center shadow-2xl">
                   <Logo className="h-6 md:h-7 w-auto" />
                 </div>
-                <div className="absolute top-1/4 right-0 md:-right-4 w-16 h-16 md:w-20 md:h-20 bg-white shadow-xl rounded-2xl flex items-center justify-center border border-black/5">
-                  <span className="material-symbols-outlined text-2xl md:text-3xl">
+                <div className="absolute top-1/4 right-2 sm:right-0 md:-right-4 w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 bg-white shadow-xl rounded-2xl flex items-center justify-center border border-black/5">
+                  <span className="material-symbols-outlined text-xl sm:text-2xl md:text-3xl">
                     token
                   </span>
                 </div>
-                <div className="absolute bottom-1/4 left-0 md:-left-4 w-16 h-16 md:w-20 md:h-20 bg-white shadow-xl rounded-2xl flex items-center justify-center border border-black/5">
-                  <span className="material-symbols-outlined text-2xl md:text-3xl">
+                <div className="absolute bottom-1/4 left-2 sm:left-0 md:-left-4 w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 bg-white shadow-xl rounded-2xl flex items-center justify-center border border-black/5">
+                  <span className="material-symbols-outlined text-xl sm:text-2xl md:text-3xl">
                     database
                   </span>
                 </div>
@@ -473,7 +477,7 @@ export default function Home() {
         {/* Final CTA */}
         <section id="cta" className="executive-slide scroll-mt-24">
           <div
-            className="content-container rounded-3xl md:rounded-[3rem] p-10 sm:p-16 md:p-24 text-center relative overflow-hidden shadow-[0_80px_150px_rgba(0,0,0,0.3)]"
+            className="content-container rounded-3xl md:rounded-[3rem] p-8 sm:p-14 md:p-24 text-center relative overflow-hidden shadow-[0_80px_150px_rgba(0,0,0,0.3)]"
             style={{
               background:
                 "linear-gradient(45deg, #333c46 0%, #000000 35%)",
@@ -483,17 +487,19 @@ export default function Home() {
               <h2 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-white mb-10 md:mb-12 leading-tight tracking-tight">
                 Lleve el control total de su operación quirúrgica.
               </h2>
-              <div className="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center items-center">
+              <div className="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center items-stretch sm:items-center">
                 <a
-                  href="#"
-                  className="px-8 md:px-12 py-4 md:py-5 bg-white text-black font-black text-base md:text-lg rounded-2xl signature-cta hover:scale-105 transition-transform"
+                  href="https://cal.com/nessdigital/30min"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full sm:w-auto text-center px-8 md:px-12 py-4 md:py-5 bg-white text-black font-black text-base md:text-lg rounded-2xl signature-cta hover:scale-105 transition-transform"
                   style={{ background: "#fff", color: "#000" }}
                 >
                   Agende una demo
                 </a>
                 <a
-                  href="#"
-                  className="px-8 md:px-12 py-4 md:py-5 border-2 border-white/20 text-white font-black text-base md:text-lg rounded-2xl hover:bg-white/10 transition-colors"
+                  href="tel:+573113559747"
+                  className="w-full sm:w-auto text-center px-8 md:px-12 py-4 md:py-5 border-2 border-white/20 text-white font-black text-base md:text-lg rounded-2xl hover:bg-white/10 transition-colors"
                 >
                   Hable con ventas
                 </a>
