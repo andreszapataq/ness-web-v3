@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Link from "next/link";
 import { Logo } from "@/components/ui/logo";
 
 const links = [
@@ -22,9 +23,9 @@ export function Nav() {
   return (
     <nav className="fixed top-0 w-full z-50 bg-white/70 backdrop-blur-2xl border-b border-black/5">
       <div className="flex justify-between items-center px-6 md:px-10 py-5 max-w-7xl mx-auto">
-        <a href="#" aria-label="Ness Digital — inicio" className="inline-flex items-center">
+        <Link href="/" aria-label="Ness Digital — inicio" className="inline-flex items-center">
           <Logo className="h-8 md:h-9 w-auto" />
-        </a>
+        </Link>
 
         <div className="hidden lg:flex gap-10 items-center text-sm font-bold uppercase tracking-widest text-on-surface-variant">
           {links.map((l) => (

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { Nav } from "@/components/sections/nav";
 import { Faq } from "@/components/sections/faq";
 import { Logo } from "@/components/ui/logo";
@@ -511,9 +512,9 @@ export default function Home() {
 
       <footer className="py-16 md:py-20 px-6 md:px-8 bg-white border-t border-black/5">
         <div className="content-container flex flex-col md:flex-row justify-between items-center gap-8 md:gap-12 font-bold uppercase tracking-widest text-[10px] text-on-surface-variant">
-          <a href="#" aria-label="Ness Digital — inicio" className="inline-flex items-center text-black">
+          <Link href="/" aria-label="Ness Digital — inicio" className="inline-flex items-center text-black">
             <Logo className="h-8 w-auto" />
-          </a>
+          </Link>
           <nav className="flex flex-wrap justify-center gap-8 md:gap-12">
             <a className="hover:text-black transition-colors" href="#">
               Privacidad
